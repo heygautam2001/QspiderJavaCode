@@ -23,6 +23,6 @@ public class VarArgMethod {
     }
 
     public static void main(String[] args) {
-        m1(1.2 , 2.0 , 3.5);
+        m1(3.5f);
     }
 }
