@@ -26,20 +26,23 @@ public class ClassCastException {
 
         WildClass wa; // reference of parent type
         wa = new Lion(); // Upcasting
-        wa.hunt();
+//        wa.hunt();
+//        wa.kingAttitude(); // compile time error because reference is of parent type , we cannot
+        // get access to the member of child type with the use of parent type.
 
-        Lion l = (Lion)wa;
-        System.out.println(wa instanceof WildClass);
-        l.kingAttitide();
+          Lion l = (Lion)wa; // Down-casting
+//        System.out.println(wa instanceof WildClass);
+//        l.kingAttitide();
 
-//        wa = new Tiger();
+
+        wa = new Tiger();
         if(wa instanceof Tiger){
             Tiger t = (Tiger)wa;
             t.blinkAndKill();
         }
 
-//        Tiger t = (tiger)wa;
-//        t.blinkAndKill();
+        Tiger t = (Tiger)wa;
+        t.blinkAndKill();
         /*
         *
           java: cannot find symbol
